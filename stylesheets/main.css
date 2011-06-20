@@ -1,0 +1,230 @@
+body {
+     font-family: Verdana, Helvetica, sans-serif;
+     background-color:white;
+  }
+  #title
+  {
+     text-align:center;
+     border: 0px solid gray;
+     background-color:white;
+     font-size:28px;
+  }
+  #main_table
+  {
+     margin-left:auto;
+     margin-right:auto;
+     background-color:#DDDDDD;
+     text-align:center;
+  }
+  #eq
+  {
+     text-align:center;
+     border: 2px solid gray;
+     background-color:white;
+     font-size:12px;
+  }
+  #eq1
+  {
+     text-align:center;
+     border: 2px solid gray;
+     background-color:#BFE3FE;
+     font-size:12px;
+  }
+  #eq2
+  {
+     text-align:center;
+     border: 2px solid gray;
+     background-color:#00477D;
+     font-size:12px;
+     color:white;
+  }
+  #eq3
+  {
+     text-align:center;
+     border: 2px solid gray;
+     background-color:#80C8FE;
+     font-size:12px;
+  }
+  #ctrs
+  {
+     background-color:#CCC;
+  }
+  #turn
+  {
+     margin-left:5px;
+     margin-right:5px;
+     vertical-align: middle;
+     text-align:left;
+     font-size:8px;
+  }
+  #numbers {
+      text-align:center;
+      max-height : 25px;
+      height : 50px;
+      max-width : 100px;
+ }
+ #reset_button
+ {
+    
+    height:30px;
+    width:80px;
+    font-size:16px;
+    position:relative;
+    top:5px;
+ }
+ 
+ 
+ /* Terminal changes*/
+ 
+ #maximize_{
+    position:absolute;
+    left:15px;
+    top:97px;
+ }
+ .maximize_textarea
+ {
+    font-family: DejaVu Sans Mono, Courier new;
+    font-size:14px;
+    font-weight:normal;
+    color:white;
+    background: transparent;
+	border-width: 0px;
+    position:absolute;
+    left:5px;
+    top:55px;
+    height:580px;
+    width:1030px;
+ }
+ #maximize_buttons
+ {
+    font-family: Arial, DejaVu Sans Mono, Courier new;
+    position:relative;
+    bottom: 650px;
+    right: 10px;
+    text-align:right;
+    font-weight:bold;
+ }
+ #maximize_terminal_title
+ {
+    font-family: Arial, DejaVu Sans Mono, Courier new;
+    color:#eae3d0;
+    text-align:left;
+    font-weight:bolder;
+    position:relative;
+    bottom: 630px;
+    left: 10px;
+ }
+ #normal_
+ {
+    position:absolute;
+    left:430px;
+    top:250px;
+ }
+ .normal_textarea
+ {
+    font-family: DejaVu Sans Mono, Courier new;
+    font-size:14px;
+    font-weight:normal;
+    color:white;
+    background: transparent;
+	border-width: 0px;
+    position:absolute;
+    left:5px;
+    top:55px;
+    height:430px;
+    width:630px;
+ }
+ #normal_buttons
+ {
+    font-family: Arial, DejaVu Sans Mono, Courier new;
+    position:relative;
+    bottom: 500px;
+    right: 10px;
+    text-align:right;
+    font-weight:bold;
+ }
+ #normal_terminal_title
+ {
+    font-family: Arial, DejaVu Sans Mono, Courier new;
+    color:#eae3d0;
+    text-align:left;
+    font-weight:bolder;
+    position:relative;
+    bottom: 480px;
+    left: 10px;
+ }
+ #minimize_
+ {
+    position:absolute;
+    left:870px;
+    top:50px;
+ }
+ .minimize_textarea
+ {
+    font-family: DejaVu Sans Mono, Courier new;
+    font-size:14px;
+    font-weight:normal;
+    color:white;
+    background: transparent;
+	border-width: 0px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    height:0px;
+    width:0px;
+ }
+ #minimize_buttons
+ {
+    font-family: Arial, DejaVu Sans Mono, Courier new;
+    position:relative;
+    bottom: 53px;
+    right: 5px;
+    text-align:right;
+    font-weight:bold;
+ }
+ #minimize_terminal_title
+ {
+    font-family: Arial, DejaVu Sans Mono, Courier new;
+    color:#eae3d0;
+    text-align:left;
+    font-weight:bolder;
+    position:relative;
+    bottom: 30px;
+    left: 10px;
+ }
+ 
+ 
+ 
+ #terminal_button
+ {
+    height:40px;
+    width:120px;
+    font-size:16px;
+ }
+ #table_info
+ {  
+    margin-left:auto;
+    margin-right:auto;
+ }
+ #info
+ {  
+    text-align:center;
+    height:50px;
+    width:200px;
+    font-size:8px;
+ }
+ #howto
+ {
+    background-color:white;
+    border: 2px solid gray;
+    position:absolute;
+    height:480px;
+    width:640px;
+    left:158px;
+    top:97px;
+ }
+ #content{
+    text-align:top;
+    font-family: Arial, DejaVu Sans Mono, Courier new;
+    font-size:10px;
+ }

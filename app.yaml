@@ -1,0 +1,18 @@
+application: networkpython
+version: 3
+runtime: python
+api_version: 1
+
+handlers:
+
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /javascript
+  static_dir: javascript
+ 
+- url: /images
+  static_dir: images
+
+- url: /.*
+  script: main_controller.py

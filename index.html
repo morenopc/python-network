@@ -1,0 +1,542 @@
+<html>
+ <head>
+  <link rel="shortcut icon" type="image/x-icon" href="http://google.com/favicon.ico" />
+  <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+  <script type="text/javascript" src="/javascript/objects.js"></script>
+ </head>
+  <body onload="javascript:draw();">
+   <div id="tAjax"></div>
+   <div id="title">Network Simulator</div>
+   <table id="main_table">
+    <tr>
+      <td></td>
+      <td id="eq" >
+        <form action="/reset" method="post">
+          <div><input id="reset_button" type="submit" value="Reset"></div>
+        </form>
+      </td>
+      <td id="eq" >
+        <button onclick="javascript:howToPlay(1);" type="button">How to play</button>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+        <table id="eq" width="100">
+          <tr>
+            <td>
+              Router 01
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerR0" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('R0');" title="Router 01"></canvas>
+                <canvas id="cableR0" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('R0');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td>------------------</td>
+      <td>-</td>
+      <td>------------------</td>
+      <td>
+        <table id="eq" width="100">
+          <tr>
+            <td>
+              Router 02
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerR1" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('R1');" title="Router 02"></canvas>
+                <canvas id="cableR1" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('R1');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td>------------------</td>
+      <td>-</td>
+      <td>------------------</td>
+      <td>
+        <table id="eq" width="100">
+          <tr>
+            <td>
+              Router 03
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerR2" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('R2');" title="Router 03"></canvas>
+                <canvas id="cableR2" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('R2');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+        </table>
+      </td>
+    <tr>
+      <td>
+      </td>
+      <td colspan="3" id="eq1">
+        <font size='4' >Network - 201.10.0.0</font>
+      </td>
+      <td>
+      </td>
+      <td colspan="3" id="eq2">
+        <font size='4' >Network - 200.171.0.0</font>
+      </td>
+      <td>
+      </td>
+      <td colspan="3" id="eq3">
+        <font size='4' >Network - 192.168.0.0</font>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+        <td>
+          <table id="eq1" width="140">
+          <tr>
+             <td>
+              Host 01
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerH0" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('H0');" title="Host 01"></canvas>
+                <canvas id="cableH0" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('H0');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <input type="hidden" name="textarea" id="textarea" value="">
+                <input id="terminal_button" type="button" name="button" value="Terminal" onclick="javascript:get(this.parentNode,'0');">
+              </form>
+           </td>
+         </tr>
+       </table>
+
+      </td>
+      <td>
+        |<br>|<br>|<br>|<br>|<br>|<br>|<br>|
+      <td>
+        <table id="eq1" width="140">
+          <tr>
+             <td>
+              Host 02
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerH1" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('H1');" title="Host 02"></canvas>
+                <canvas id="cableH1" width="65" height="50" style="border: 0px dotted; float: right;"  onclick="javascript:change_cable('H1');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <input type="hidden" name="textarea" id="textarea" value="">
+                <input id="terminal_button" type="button" name="button" value="Terminal" onclick="javascript:get(this.parentNode,'1');">
+              </form>
+           </td>
+         </tr>
+       </table>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        <table id="eq2" width="140" height="70">
+          <tr>
+             <td>
+              Host 05
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerH4" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('H4');" title="Host 05"></canvas>
+                <canvas id="cableH4" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('H4');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <input type="hidden" name="textarea" id="textarea" value="">
+                <input id="terminal_button" type="button" name="button" value="Terminal" onclick="javascript:get(this.parentNode,'4');">
+              </form>
+           </td>
+         </tr>
+       </table>
+        
+      </td>
+      <td>
+        |<br>|<br>|<br>|<br>|<br>|<br>|<br>|
+      </td>
+      <td>
+          <table id="eq2" width="140">
+          <tr>
+             <td>
+              Host 06
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerH5" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('H5');" title="Host 06"></canvas>
+                <canvas id="cableH5" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('H5');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <input type="hidden" name="textarea" id="textarea" value="">
+                <input id="terminal_button" type="button" name="button" value="Terminal" onclick="javascript:get(this.parentNode,'5');">
+              </form>
+           </td>
+         </tr>
+       </table>
+      </td>
+      <td>
+      </td>
+      <td>
+        <table id="eq3" width="140">
+          <tr>
+             <td>
+              Host 09
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerH8" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('H8');" title="Host 09"></canvas>
+                <canvas id="cableH8" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('H8');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <input type="hidden" name="textarea" id="textarea" value="">
+                <input id="terminal_button" type="button" name="button" value="Terminal" onclick="javascript:get(this.parentNode,'8')">
+              </form>
+           </td>
+         </tr>
+       </table>
+      </td>
+      <td>
+        |<br>|<br>|<br>|<br>|<br>|<br>|<br>|
+      </td>
+      <td>
+        <table id="eq3" width="140">
+          <tr>
+             <td>
+              Host 10
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerH9" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('H9');" title="Host 10"></canvas>
+                <canvas id="cableH9" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('H9');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <input type="hidden" name="textarea" id="textarea" value="">
+                <input id="terminal_button" type="button" name="button" value="Terminal" onclick="javascript:get(this.parentNode,'9');">
+              </form>
+           </td>
+         </tr>
+       </table>
+      </td>
+    <tr>
+      <td>
+      </td>
+      <td>
+         
+      </td>
+      <td>
+        <table id="eq1">
+          <tr>
+            <td>
+              Switch 01
+            </td>
+          </td>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerS0" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('S0');" title="Switch 01"></canvas>
+                <canvas id="cableS0" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('S0');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+        </table>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>
+        <table id="eq2">
+          <tr>
+             <td>
+               Switch 02
+             </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerS1" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('S1');" title="Switch 02"></canvas>
+                <canvas id="cableS1" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('S1');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>
+        <table id="eq3">
+          <tr>
+            <td>
+              Switch 03
+            </td>
+          </td>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerS2" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('S2');" title="Switch 03"></canvas>
+                <canvas id="cableS2" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('S2');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <table id="eq1" width="140">
+          <tr>
+             <td>
+              Host 03
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerH2" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('H2');" title="Host 03"></canvas>
+                <canvas id="cableH2" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('H2');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <input type="hidden" name="textarea" id="textarea" value="">
+                <input id="terminal_button" type="button" name="button" value="Terminal" onclick="javascript:get(this.parentNode,'2');">
+              </form>
+           </td>
+         </tr>
+       </table>
+      </td>
+      <td>
+      </td>
+      <td>
+        <table id="eq1" width="140">
+          <tr>
+             <td>
+              Host 04
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerH3" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('H3');" title="Host 04"></canvas>
+                <canvas id="cableH3" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('H3');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <input type="hidden" name="textarea" id="textarea" value="">
+                <input id="terminal_button" type="button" name="button" value="Terminal" onclick="javascript:get(this.parentNode,'3');">
+              </form>
+           </td>
+         </tr>
+       </table>
+      </td>
+      <td>
+      </td>
+      <td>
+        <table id="eq2" width="140">
+          <tr>
+             <td>
+              Host 07
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerH6" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('H6');" title="Host 07"></canvas>
+                <canvas id="cableH6" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('H6');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <input type="hidden" name="textarea" id="textarea" value="">
+                <input id="terminal_button" type="button" name="button" value="Terminal" onclick="javascript:get(this.parentNode,'6');">
+              </form>
+           </td>
+         </tr>
+       </table>
+      </td>
+      <td>
+      </td>
+      <td>
+        <table id="eq2" width="140">
+          <tr>
+             <td>
+              Host 08
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerH7" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('H7');" title="Host 08"></canvas>
+                <canvas id="cableH7" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('H7');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <input type="hidden" name="textarea" id="textarea" value="">
+                <input id="terminal_button" type="button" name="button" value="Terminal" onclick="javascript:get(this.parentNode,'7');">
+              </form>
+           </td>
+         </tr>
+       </table>
+      </td>
+      <td>
+      </td>
+      <td>
+        <table id="eq3" width="140">
+          <tr>
+            <td>
+              Host 11
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerH10" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('H10');" title="Host 11"></canvas>
+                <canvas id="cableH10" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('H10');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <input type="hidden" name="textarea" id="textarea" value="">
+                <input id="terminal_button" type="button" name="button" value="Terminal" onclick="javascript:get(this.parentNode,'10');">
+              </form>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td>
+      </td>
+      <td>
+        <table id="eq3" width="140">
+          <tr>
+             <td>
+              Host 12
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <canvas id="powerH11" width="80" height="70" style="border: 0px dotted; float: left;" onclick="javascript:change_power('H11');" title="Host 12"></canvas>
+                <canvas id="cableH11" width="65" height="50" style="border: 0px dotted; float: right;" onclick="javascript:change_cable('H11');" title="Network cable. Connect me!"></canvas>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <input type="hidden" name="textarea" id="textarea" value="">
+                <input id="terminal_button" type="button" name="button" value="Terminal" onclick="javascript:get(this.parentNode,'11');">
+              </form>
+           </td>
+         </tr>
+       </table>
+      </td>
+    </tr>    
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><font size='2' >Version 1.2</font></td>
+     </tr>
+   </table>
+   <table id="table_info">
+     <tr>
+       <td id="info">
+         <a href="http://sites.google.com/site/jogoblender/" target="_blank">About</a>
+       </td>
+       <td id="info">
+         <a href="http://sites.google.com/site/morenopcwork/aboutme" target="_blank">Moreno Cunha</a>
+       </td>
+       <td id="info">
+         GaiaX (c) - Tokyo 2010
+       </td>
+       <td id="info">
+         <a href="http://code.google.com/appengine/" target="_blank"><img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif" alt="Powered by Google App Engine" border="0"/></a>
+       </td>
+       <td>
+         <img src="/images/logo-Ubuntu-small.png"/>
+       </td>
+     </tr>
+   </table>
+  </body>
+</html>
