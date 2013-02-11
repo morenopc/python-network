@@ -1,18 +1,11 @@
-Network-Python ou Rede de Computadores Python
+How to play   
+===========  
+About the network enviroment
+----------------------------
 
-It's a simulation of a real network made using Python and Google app engine as server side.
-Many things have to be improve and I hope my friends can help me. :) 
+There are three networks:
+-------------------------
 
-É uma silulação de uma rede de computadores real usando Python e Google app engine como servidor.
-Muitas coisas precisam ser melhorados e espero que meus amigos me ajudem. :)
-
-Moreno Cunha
-moreno.pinheiro@gmail.com
-
-How to play	
-About the network enviroment:
-
-There are three networks :
 201.10.0.0
 Router01
 Switch01
@@ -32,6 +25,7 @@ Host09~12
 
 
 Routers:
+--------
 Router01 can communicate with Router02;
 Router02 can communicate with Router01 and 03;
 and Router03 can communicate with Router02.
@@ -41,7 +35,7 @@ The Switchs make the communication
 between the Router and the Hosts.
 
 Start to play:
-
+--------------
 To start to play you need to turn on a host (click on host you want), connect cables and open the terminal (click on the Terminal button).
 
 To know which commands you can use in the terminal type help (@169.254.0.0:~$ help) and press enter to see the command list.
@@ -49,7 +43,7 @@ To know which commands you can use in the terminal type help (@169.254.0.0:~$ he
 Use the command ping IP to test if there is communication between two hosts.
 
 Command list:
-
+-------------
 help get (this) commands list
 ping [ip address] get ping
 ifconfig get host information
