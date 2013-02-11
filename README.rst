@@ -10,9 +10,7 @@ Completed in July 2009* - `project web site <https://sites.google.com/site/jogob
 How it works
 ------------
 
-It simulates a computer network OSI (Open Systems Interconnection) layers until Network and the equipment using Python Oriented Objects Classes.
-.. image:: http://goo.gl/qQHeJ
-.. image:: http://goo.gl/yrtk8
+It simulates a computer network OSI (Open Systems Interconnection) layers until Network and the equipment using Python Oriented Objects Classes. `classes diagram <https://sites.google.com/site/jogoblender/home/diagramas/class-diagram>`_
 
 Why web app
 -----------
